@@ -61,7 +61,16 @@ namespace my_uuidgen.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to --uppercase.
+        /// </summary>
+        internal static string UppercaseSwitch {
+            get {
+                return ResourceManager.GetString("UppercaseSwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --version.
         /// </summary>
         internal static string VersionSwitch {
             get {
