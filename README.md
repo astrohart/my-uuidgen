@@ -12,9 +12,18 @@ Prints a Universally-Unique Identifier, or UUID, to the standard output on a lin
 my-uuidgen --version
 ```
 The **--version** switch specifies that ```my-uuidgen``` should print its version number to the standard output on a line by itself, and then terminate.
+**NOTE:** If the ```--version``` switch is passed, it must be the first switch on the command line, and if it is used, then any other switches will be ignored.  The version number is not copied onto the Clipboard.
 ```
 my-uuidgen --uppercase
 ```
 The **--uppercase** switch specifies that any of the hexadecimal digits A-F in the outputted UUID should be printed in uppercase.  Lowercase is the default.
-
-**NOTE:** Only one argument may be passed on the command line at any given time.
+```
+my-uuidgen --no-copy
+```
+By default, ```my-uuidgen``` places the UUID it generates onto the Clipboard upon execution.  The **--no-copy** switch suppresses this behavior.
+## Changelog
+(a) The restriction about putting only one command-line argument at a time has been removed.
+(b) However, the ```--version``` switch will only work if it is specified first.
+(c) If the ```--version``` switch is passed, all other switches are ignored.
+(d) By default, all generated UUIDs are placed on the Clipboard.
+(e) Use the ```--no-copy``` switch to prevent the placement of a generated UUID onto the Clipboard.
