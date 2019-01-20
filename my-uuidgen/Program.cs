@@ -1,5 +1,6 @@
 ﻿using my_uuidgen.Properties;
 using System;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -26,7 +27,10 @@ namespace my_uuidgen
                     Environment.Exit(0); /* exit code of zero means success */
                 }
                 else
-                    IsUppercase = Resources.UppercaseSwitch.Equals(args[0]);    /* is the '--uppercase' flag applied? */
+                {
+                    IsUppercase = args.Contains(Resources.UppercaseSwitch);
+                    ShouldNotCopy = args.Contains(Resources.NoCopySwitch);
+                }
             }
 
             /* This software has one job in life -- to get a new Globally-Unique Identifier (GUID) and then
@@ -40,13 +44,22 @@ namespace my_uuidgen
 
             Console.WriteLine(guidString);
 
-            // place the GUID string that we otherwise pump to standard output, also to be on the Clipboard.
-            // This way, this app can also be launched, e.g., from the Tools menu on Visual Studio and then the user
-            // can just do a paste into whatever file they are working on right off the bat.
+            if (!ShouldNotCopy)
+            {
+                // place the GUID string that we otherwise pump to standard output, also to be on the Clipboard.
+                // This way, this app can also be launched, e.g., from the Tools menu on Visual Studio and then the user
+                // can just do a paste into whatever file they are working on right off the bat.
 
-            Clipboard.SetText(guidString);
+                Clipboard.SetText(guidString);
+            }
 
             Environment.Exit(0);    /* exit code of zero means success */
         }
+
+        /// <summary>
+        /// Gets or sets a value that indicates whether we should not place the generated GUID text onto the Clipboard
+        /// after it's been written to standard output.
+        /// </summary>
+        private static bool ShouldNotCopy { get; set; }
     }
 }

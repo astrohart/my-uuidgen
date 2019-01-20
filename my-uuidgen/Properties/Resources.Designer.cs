@@ -61,6 +61,15 @@ namespace my_uuidgen.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to --no-copy.
+        /// </summary>
+        internal static string NoCopySwitch {
+            get {
+                return ResourceManager.GetString("NoCopySwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to --uppercase.
         /// </summary>
         internal static string UppercaseSwitch {
