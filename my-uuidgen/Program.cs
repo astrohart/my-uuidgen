@@ -14,7 +14,7 @@ namespace my_uuidgen
         /// <summary>
         /// Gets or sets a value indicating whether UUIDs are written to the standard output with hex digits A-F in UPPERCASE or not.
         /// </summary>
-        public static bool IsUppercase { get; set; }
+        private static bool IsUppercase { get; set; }
 
         public static void Main(string[] args)
         {
