@@ -2,6 +2,7 @@
 using System;
 using System.Reflection;
 using System.Runtime.Versioning;
+using System.Windows.Forms;
 
 namespace my_uuidgen
 {
@@ -32,7 +33,19 @@ namespace my_uuidgen
              * write it to the standard output and then exit.  This program is meant to replicate the uuidgen.exe
              * utility provided with the Windows SDK, but I wanted to use it in my own batch files, and who the heck
              * wants to download and install the SDK all the time? */
-            Console.WriteLine(IsUppercase ? $"{Guid.NewGuid().ToString().ToUpperInvariant()}" : $"{Guid.NewGuid()}");
+
+            var newGuid = Guid.NewGuid();
+
+            var guidString = IsUppercase ? $"{newGuid.ToString().ToUpperInvariant()}" : $"{newGuid}";
+
+            Console.WriteLine(guidString);
+
+            // place the GUID string that we otherwise pump to standard output, also to be on the Clipboard.
+            // This way, this app can also be launched, e.g., from the Tools menu on Visual Studio and then the user
+            // can just do a paste into whatever file they are working on right off the bat.
+
+            Clipboard.SetText(guidString);
+
             Environment.Exit(0);    /* exit code of zero means success */
         }
     }
