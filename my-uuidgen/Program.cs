@@ -23,7 +23,7 @@ namespace my_uuidgen
         [STAThread]
         public static void Main(string[] args)
         {
-            if (args.Length > 0)
+            if (args.Any())
             {
                 if (Resources.VersionSwitch.Equals(args[0]))
                 {
