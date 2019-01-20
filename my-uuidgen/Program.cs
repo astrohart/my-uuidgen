@@ -16,6 +16,10 @@ namespace my_uuidgen
         /// </summary>
         private static bool IsUppercase { get; set; }
 
+        /// <summary>
+        /// Entry point.
+        /// </summary>
+        /// <param name="args">Array of strings containing the command-line arguments passed to the program by the user.</param>
         [STAThread]
         public static void Main(string[] args)
         {
