@@ -1,6 +1,8 @@
 ﻿using my_uuidgen.Properties;
 using System;
+using System.Linq;
 using System.Reflection;
+using System.Windows.Forms;
 
 namespace my_uuidgen
 {
