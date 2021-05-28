@@ -22,7 +22,7 @@ namespace my_uuidgen.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace my_uuidgen.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("my_uuidgen.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace my_uuidgen.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -61,18 +61,63 @@ namespace my_uuidgen.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to --hexgroups.
+        /// </summary>
+        public static string HexGroupsSwitch {
+            get {
+                return ResourceManager.GetString("HexGroupsSwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --hyphensonly.
+        /// </summary>
+        public static string HyphensOnlySwitch {
+            get {
+                return ResourceManager.GetString("HyphensOnlySwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to --no-copy.
         /// </summary>
-        internal static string NoCopySwitch {
+        public static string NoCopySwitch {
             get {
                 return ResourceManager.GetString("NoCopySwitch", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to --noformat.
+        /// </summary>
+        public static string NoFormatSwitch {
+            get {
+                return ResourceManager.GetString("NoFormatSwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --parens.
+        /// </summary>
+        public static string ParensSwitch {
+            get {
+                return ResourceManager.GetString("ParensSwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to --registry.
+        /// </summary>
+        public static string RegistrySwitch {
+            get {
+                return ResourceManager.GetString("RegistrySwitch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to --uppercase.
         /// </summary>
-        internal static string UppercaseSwitch {
+        public static string UppercaseSwitch {
             get {
                 return ResourceManager.GetString("UppercaseSwitch", resourceCulture);
             }
@@ -81,7 +126,7 @@ namespace my_uuidgen.Properties {
         /// <summary>
         ///   Looks up a localized string similar to --version.
         /// </summary>
-        internal static string VersionSwitch {
+        public static string VersionSwitch {
             get {
                 return ResourceManager.GetString("VersionSwitch", resourceCulture);
             }

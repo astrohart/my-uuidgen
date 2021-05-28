@@ -69,6 +69,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandLineInfo.cs" />
     <Compile Include="FormatType.cs" />
     <Compile Include="GetFormatType.cs" />
     <Compile Include="GetGuidFormatSpecifier.cs" />
@@ -84,7 +85,7 @@
     <EmbeddedResource Include="App.config" />
     <EmbeddedResource Include="packages.config" />
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>

@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="HexGroupsSwitch" xml:space="preserve">
+    <value>--hexgroups</value>
+  </data>
+  <data name="HyphensOnlySwitch" xml:space="preserve">
+    <value>--hyphensonly</value>
+  </data>
   <data name="NoCopySwitch" xml:space="preserve">
     <value>--no-copy</value>
+  </data>
+  <data name="NoFormatSwitch" xml:space="preserve">
+    <value>--noformat</value>
+  </data>
+  <data name="ParensSwitch" xml:space="preserve">
+    <value>--parens</value>
+  </data>
+  <data name="RegistrySwitch" xml:space="preserve">
+    <value>--registry</value>
   </data>
   <data name="UppercaseSwitch" xml:space="preserve">
     <value>--uppercase</value>
