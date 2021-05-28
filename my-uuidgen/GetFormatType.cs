@@ -22,7 +22,7 @@ namespace my_uuidgen
         /// </returns>
         public static FormatType FromSwitch(string argument)
         {
-            var result = FormatType.DigitsHyphensAndBraces;
+            var result = FormatType.DigitsWithHyphens;
 
             if (Resources.RegistrySwitch.Equals(argument.ToLowerInvariant()))
                 result = FormatType.DigitsHyphensAndBraces;

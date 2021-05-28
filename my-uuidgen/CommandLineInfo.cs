@@ -59,6 +59,7 @@ namespace my_uuidgen
             {
                 var arg = argsList.Pop();
                 if (string.IsNullOrWhiteSpace(arg)) continue;
+                if ("/verysilent".Equals(arg.ToLowerInvariant())) continue;
 
                 if (Resources.UppercaseSwitch.Equals(arg.ToLowerInvariant()))
                 {

@@ -26,7 +26,7 @@
         /// </returns>
         public static string ForFormatType(FormatType type)
         {
-            var result = "B";
+            var result = "D";
 
             switch (type)
             {
