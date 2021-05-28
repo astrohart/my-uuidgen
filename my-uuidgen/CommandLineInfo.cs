@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 
 namespace my_uuidgen
 {
@@ -54,18 +53,30 @@ namespace my_uuidgen
             if (!argsList.Any())
                 return result;
 
-            while(argsList.Any())
+            var formatTypeProvided = false; // this can only happen once
+
+            while (argsList.Any())
             {
                 var arg = argsList.Pop();
                 if (string.IsNullOrWhiteSpace(arg)) continue;
 
-                result.IsUppercase =
-                    Resources.UppercaseSwitch.Equals(arg.ToLowerInvariant());
+                if (Resources.UppercaseSwitch.Equals(arg.ToLowerInvariant()))
+                {
+                    result.IsUppercase = true;
+                    continue;
+                }
 
-                result.ShouldNotCopy =
-                    Resources.NoCopySwitch.Equals(arg.ToLowerInvariant());
+                if (Resources.NoCopySwitch.Equals(arg.ToLowerInvariant()))
+                {
+                    result.ShouldNotCopy = true;
+                    continue;
+                }
+
+                if (!arg.IsFormatTypeArgument() || formatTypeProvided)
+                    continue;
 
                 result.FormatType = GetFormatType.FromSwitch(arg);
+                formatTypeProvided = !formatTypeProvided;
             }
 
             return result;

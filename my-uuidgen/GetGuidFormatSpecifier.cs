@@ -24,7 +24,7 @@
         ///     cref="M:System.Guid.ToString" />
         /// method.
         /// </returns>
-        public static string FromFormatType(FormatType type)
+        public static string ForFormatType(FormatType type)
         {
             var result = "B";
 
