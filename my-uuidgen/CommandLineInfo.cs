@@ -1,6 +1,7 @@
 ﻿using my_uuidgen.Properties;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace my_uuidgen
@@ -11,25 +12,36 @@ namespace my_uuidgen
         /// Gets or sets the <see cref="T:my_uuidgen.FormatType" /> value that
         /// specifies how to format the GUID.
         /// </summary>
-        public FormatType FormatType { get; set; } =
-            FormatType.DigitsHyphensAndBraces;
+        public FormatType FormatType
+        {
+            [DebuggerStepThrough] get;
+            [DebuggerStepThrough] set;
+        } = FormatType.DigitsHyphensAndBraces;
 
         /// <summary>
         /// Gets or sets a value indicating whether UUIDs are written to the
         /// standard output with hex digits A-F in UPPERCASE or not.
         /// </summary>
-        public bool IsUppercase { get; set; }
+        public bool IsUppercase
+        {
+            [DebuggerStepThrough] get;
+            [DebuggerStepThrough] set;
+        }
 
         /// <summary>
         /// Gets or sets a value that indicates whether we should not place the
         /// generated GUID text onto the Clipboard after it's been written to
         /// standard output.
         /// </summary>
-        public bool ShouldNotCopy { get; set; }
+        public bool ShouldNotCopy
+        {
+            [DebuggerStepThrough] get;
+            [DebuggerStepThrough] set;
+        }
 
         /// <summary>
         /// Parses the command-line arguments that are passed to this program by
-        /// the user and fills the properties of a newly-instantiated instance
+        /// the user and fills the properties with a newly-instantiated instance
         /// of <see cref="T:my_uuidgen.CommandLineInfo" /> accordingly.
         /// </summary>
         /// <param name="args">

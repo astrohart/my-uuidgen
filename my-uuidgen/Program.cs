@@ -40,11 +40,11 @@ namespace my_uuidgen
              * wants to download and install the SDK all the time? */
 
             var newGuidString = Guid.NewGuid()
-                              .ToString(
-                                  GetGuidFormatSpecifier.ForFormatType(
-                                      cmdInfo.FormatType
-                                  )
-                              );
+                                    .ToString(
+                                        GetGuidFormatSpecifier.ForFormatType(
+                                            cmdInfo.FormatType
+                                        )
+                                    );
 
             var guidString = cmdInfo.IsUppercase
                 ? newGuidString.ToUpperInvariant()
